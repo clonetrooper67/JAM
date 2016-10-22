@@ -36,4 +36,28 @@ public class User {
     public int getRating() {
         return rating;
     }
+
+    public void setuName(String n) {
+        uName = n;
+    }
+
+    public String getuName() {
+        return uName;
+    }
+
+    public void setContact(String c) {
+        contact = c;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setDesc(String d) {
+        desc = d;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
 }
