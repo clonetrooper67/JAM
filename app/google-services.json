@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "61871389886",
+    "firebase_url": "https://junior-achievement-mobil-ad088.firebaseio.com",
+    "project_id": "junior-achievement-mobil-ad088",
+    "storage_bucket": "junior-achievement-mobil-ad088.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61871389886:android:21d6dfb158cc5204",
+        "android_client_info": {
+          "package_name": "com.example.jam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61871389886-bnbhhsmtiiu9p4e8olr6u7nh6k5f94ba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVnZK8LbJty_YSmGvKNDCOyj6LRWyexh0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
