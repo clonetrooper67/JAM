@@ -31,11 +31,29 @@
         android:id="@+id/textView2" />
 
     <TextView
-        android:text="TextView"
+        android:text="Body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/textView3"
         android:layout_below="@+id/titleEditText"
-        android:layout_alignStart="@+id/titleEditText"
-        android:layout_marginTop="51dp"
-        android:id="@+id/textView3" />
+        android:layout_alignStart="@+id/titleEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:id="@+id/bodyEditText"
+        android:hint="Body" />
+
+    <Button
+        android:text="Submit Post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/submitPostButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
