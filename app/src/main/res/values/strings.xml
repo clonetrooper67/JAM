@@ -19,4 +19,9 @@
     <string name="action_logout">Logout</string>
 
     <string name="action_settings">Settings</string>
+    <string name="menu_item_contact_pages">Contact Pages</string>
+    <string name="menu_item_program_request">Program Request</string>
+    <string name="menu_item_volunteer_registration">Volunteer Registration</string>
+    <string name="menu_item_website">Website</string>
+
 </resources>
