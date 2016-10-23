@@ -44,7 +44,7 @@ public class LogInActivity extends AppCompatActivity {
         passwordEditText = (EditText) findViewById(R.id.passwordField);
         logInButton = (Button) findViewById(R.id.loginButton);
 
-        updateLogInButton();
+        updateLogInState();
 
         signUpTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,19 +100,22 @@ public class LogInActivity extends AppCompatActivity {
             }
 
         });
-        updateLogInButton();
+        updateLogInState();
 
     }
 
-    protected void updateLogInButton() {
+    protected void updateLogInState() {
         if (mFireBaseUser != null) {
             emailEditText.setVisibility(View.GONE);
             passwordEditText.setVisibility(View.GONE);
             logInButton.setText("Edit Profile");
+            signUpTextView.setVisibility(View.GONE);
         } else {
             emailEditText.setVisibility(View.VISIBLE);
             passwordEditText.setVisibility(View.VISIBLE);
             logInButton.setText("Login");
+            signUpTextView.setVisibility(View.VISIBLE);
+
         }
     }
 }
