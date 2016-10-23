@@ -34,9 +34,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
-// Hello World! --Josh
-// Hello World! --Zephanoh
-// Hello World! --Shane
+// The MainActivity class controls our main screen. Posts are displayed in a recycler list, in order
+// of popularity. When Back is pressed, the app is minimized; when Account is pressed, LogInActivity
+// is called. A Navigation Sidebar is populated with links that open various pages from the triadja.org
+// website.
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, FirebaseAuth.AuthStateListener {
 
@@ -147,6 +148,15 @@ public class MainActivity extends AppCompatActivity
             mFirebaseUser = mFirebaseAuth.getCurrentUser();
             return true;
         }
+        // Scroll to bottom on new messages
+        mRecyclerViewAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
+            @Override
+            public void onItemRangeInserted(int positionStart, int itemCount) {
+                mManager.smoothScrollToPosition(mPosts, null, mRecyclerViewAdapter.getItemCount());
+            }
+        });
+
+        mPosts.setAdapter(mRecyclerViewAdapter);
 
         return super.onOptionsItemSelected(item);
     }
@@ -163,6 +173,8 @@ public class MainActivity extends AppCompatActivity
             openPage("https://triadja.org/classroom-volunteers/volunteer-registration/");
         } else if (id == R.id.website_link) {
             openPage("https://triadja.org/");
+        }else if (id == R.id.programs_link) {
+            openPage("https://triadja.org/programs");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -13,7 +13,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
+// The SignUpActivity class controls the activity_sign_up view. This view allows the user to
+// create a profile by entering an email address and a password. After entering and clicking
+// the Sign Up button, the view is returned to the Main screen, and the user is logged in.
 public class SignUpActivity extends AppCompatActivity {
 
     protected EditText passwordEditText;

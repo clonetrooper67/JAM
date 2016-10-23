@@ -15,6 +15,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+// The LogInActivity class controls the activity_log_in view. When a user clicks the
+// Account button from the navigation header bar, the user is taken to a log in screen.
+// From this screen, a user can log in or sign up. If a user is already logged in, they
+// are not asked to log in again. Instead, they are offered to edit profile or to sign up
+// a different account.
 public class LogInActivity extends AppCompatActivity {
 
     protected EditText emailEditText;
