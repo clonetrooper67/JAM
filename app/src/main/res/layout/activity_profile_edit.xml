@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:id="@+id/activity_profile_edit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,6 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorSecondary"
     tools:context="example.com.jam.ProfileEditActivity">
 
     <EditText
@@ -15,10 +17,13 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:id="@+id/fNameEditText"
-        android:hint="First Name" />
+        android:hint="First Name"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="15dp"
+        android:textSize="25dp"
+        android:background="@drawable/shapeline"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -27,26 +32,22 @@
         android:ems="10"
         android:layout_below="@+id/fNameEditText"
         android:layout_alignParentStart="true"
+        android:textSize="25dp"
         android:id="@+id/lNameEditText"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/shapeline"
         android:hint="Last Name" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:layout_below="@+id/lNameEditText"
-        android:layout_alignParentStart="true"
-        android:id="@+id/desc" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="Bio"
         android:ems="10"
-        android:layout_below="@+id/desc"
-        android:layout_alignParentStart="true"
-        android:id="@+id/editText4" />
-</RelativeLayout>
+        android:id="@+id/desc"
+        android:layout_below="@+id/lNameEditText"
+        android:background="@drawable/shapeline"
+        android:textSize="25dp"
+        android:layout_alignParentStart="true" />
+</LinearLayout>
