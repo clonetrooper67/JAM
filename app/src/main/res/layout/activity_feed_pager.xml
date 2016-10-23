@@ -3,7 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:android="http://schemas.android.com/apk/res-auto"
     xmlns:android2="http://schemas.android.com/apk/res/android"
-    android:id="@+idfeedCard"
+    android:id="@+id/feedCard"
     android:layout_width="match_parent" android:layout_height="40dp"
     android:layout_margin="8dp"
     android2:layout_width="wrap_content"
@@ -33,7 +33,7 @@
             <TextView
                 android2:text="TextView"
                 android2:layout_width="match_parent"
-                android2:layout_height="30"
+                android2:layout_height="30dp"
                 android2:id="@+id/textView10" />
         </LinearLayout>
 
@@ -61,7 +61,7 @@
                         <TextView
                             android2:text="TextView"
                             android2:layout_width="match_parent"
-                            android2:layout_height="30"
+                            android2:layout_height="30dp"
                             android2:id="@+id/textView12"
                             android2:layout_weight="0.21" />
 
