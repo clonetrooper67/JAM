@@ -21,21 +21,15 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="65dp"
+            android:layout_width="85dp"
             android:layout_height="185dp"
             android:weightSum="1">
 
             <TextView
-                android:text="Karma:"
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:id="@+id/card_view_post_karma"
-                android:textSize="15sp" />
-
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/karmaCount" />
+                android:id="@+id/karmaCount"
+                android:layout_weight="0.05" />
 
             <ImageButton
                 android:layout_width="37dp"
@@ -54,18 +48,10 @@
             android:weightSum="1">
 
             <TextView
-                android:layout_width="131dp"
-                android:layout_height="34dp"
-                android:gravity="left"
-
-
-                android:id="@+id/card_view_uname" />
-
-            <TextView
 
                 android:text="Post"
                 android:layout_width="match_parent"
-                android:layout_height="72dp"
+                android:layout_height="148dp"
                 android:id="@+id/card_view_post_body" />
 
             <ImageView

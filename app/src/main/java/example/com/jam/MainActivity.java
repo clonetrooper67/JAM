@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void populateViewHolder(PostHolder postView, Post post, int position) {
                 postView.setBody(post.getBody());
-                postView.setUser(post.getUser());
+//                postView.setUser(post.getUser());
                 postView.setKarma(String.valueOf(post.getKarma()));
 
                 FirebaseUser currentUser = mFirebaseAuth.getCurrentUser();
@@ -222,10 +222,10 @@ public class MainActivity extends AppCompatActivity
             mView = itemView;
         }
 
-        public void setUser(String name) {
-            TextView field = (TextView) mView.findViewById(R.id.card_view_uname);
-            field.setText(name);
-        }
+//        public void setUser(String name) {
+//            TextView field = (TextView) mView.findViewById(R.id.card_view_uname);
+//            field.setText(name);
+//        }
 
         public void setBody(String text) {
             TextView field = (TextView) mView.findViewById(R.id.card_view_post_body);
@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity
         }
         public void setKarma(String text){
             TextView field = (TextView) mView.findViewById(R.id.karmaCount);
-            field.setText(text);
+            field.setText("Karma: " + text);
         }
     }
 
