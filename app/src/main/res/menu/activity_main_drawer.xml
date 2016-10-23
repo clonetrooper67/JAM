@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
         <item
-            android:id="@+id/program_link"
+            android:id="@+id/programs_link"
             android:icon="@drawable/ic_public_black_24dp"
             android:title="@string/menu_item_programs_link" />
         <item
