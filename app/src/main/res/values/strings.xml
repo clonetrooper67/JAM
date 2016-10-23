@@ -24,5 +24,6 @@
     <string name="menu_item_program_request">Program Request</string>
     <string name="menu_item_volunteer_registration">Volunteer Registration</string>
     <string name="menu_item_website">Website</string>
+    <string name="menu_item_programs_link">Programs</string>
 
 </resources>

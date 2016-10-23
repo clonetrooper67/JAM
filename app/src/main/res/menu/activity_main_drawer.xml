@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+        <item
+            android:id="@+id/program_link"
+            android:icon="@drawable/ic_public_black_24dp"
+            android:title="@string/menu_item_programs_link" />
+        <item
+            android:id="@+id/website_link"
+            android:icon="@drawable/ic_public_black_24dp"
+            android:title="@string/menu_item_website" />
         <item
             android:id="@+id/program_request"
             android:icon="@drawable/ic_public_black_24dp"
@@ -9,9 +16,4 @@
             android:id="@+id/volunteer_registration"
             android:icon="@drawable/ic_public_black_24dp"
             android:title="@string/menu_item_volunteer_registration" />
-        <item
-            android:id="@+id/website_link"
-            android:icon="@drawable/ic_public_black_24dp"
-            android:title="@string/menu_item_website" />
-
 </menu>
