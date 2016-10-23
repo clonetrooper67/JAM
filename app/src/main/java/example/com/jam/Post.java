@@ -7,7 +7,6 @@ import java.util.UUID;
  */
 
 public class Post {
-    private String title;
     private String body;
     private int karma;
     private String user;
@@ -15,14 +14,12 @@ public class Post {
 
     public Post() {}
 
-    public Post(String titleIn, String bodyIn, String userIn) {
-        this.title = titleIn;
+    public Post(String bodyIn, String userIn) {
         this.body = bodyIn;
         this.karma = 0;
         this.user = userIn;
     }
-    public Post(String titleIn, String bodyIn, String userIn, String postImagePath) {
-        this.title = titleIn;
+    public Post(String bodyIn, String userIn, String postImagePath) {
         this.body = bodyIn;
         this.karma = 0;
         this.user = userIn;
@@ -61,11 +58,4 @@ public class Post {
         this.karma = karma;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 }

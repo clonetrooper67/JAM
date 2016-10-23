@@ -67,13 +67,11 @@ public class NewPostActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText titleEditText = (EditText) findViewById(R.id.titleEditText);
                 EditText bodyEditText = (EditText) findViewById(R.id.bodyEditText);
 
-                String title = titleEditText.getText().toString();
                 String body = bodyEditText.getText().toString();
 
-                if(!title.matches("") && !body.matches("")){
+                if(!body.matches("")){
                     if(hasImage){
                         StorageReference storageRef = storage.getReferenceFromUrl("gs://junior-achievement-mobil-ad088.appspot.com/");
                         StorageReference imageRef = storageRef.child("postImages/" + mFirebaseUser.getUid() + ".jpg");
@@ -97,10 +95,10 @@ public class NewPostActivity extends AppCompatActivity {
                             }
                         });
 
-                        Post post = new Post(title, body, mUserId = mFirebaseUser.getUid(), "postImages" + "/" + mFirebaseUser.getUid());
+                        Post post = new Post(body, mUserId = mFirebaseUser.getUid(), "postImages" + "/" + mFirebaseUser.getUid());
                         mDatabase.child("posts").push().setValue(post);
                     }else {
-                        Post post = new Post(title, body, mUserId = mFirebaseUser.getUid());
+                        Post post = new Post(body, mUserId = mFirebaseUser.getUid());
                         mDatabase.child("posts").push().setValue(post);
                     }
 
