@@ -10,13 +10,21 @@ import com.google.firebase.storage.StorageReference;
 public class FireBaseReader {
     void init(String UUID){
         FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReferenceFromUrl("gs://junior-achievement-mobil-ad088.appspot.com");
-        imagesRef = storageRef.child("images");
+        StorageReference storageRef = storage.getReferenceFromUrl("gs://junior-achievement-mobil-ad088.appspot.com/");
+        storageRef = storage.getReferenceFromUrl("gs://<your-bucket-name>");
+        StorageReference imagesRef = storageRef.child("images");
+        StorageReference spaceRef = storageRef.child("images/space.jpg");
+        String fileName = "profile.jpg";
+        spaceRef = imagesRef.child(fileName);
 
-        StorageReference userProfRef = storageRef.child("images/" + UUID + "profile.jpg");
+        String path = spaceRef.getPath();
+
+        String name = spaceRef.getName();
+
+        imagesRef = spaceRef.getParent();
+
     }
     public void getImage(String UUID){
-
 
     }
 }
