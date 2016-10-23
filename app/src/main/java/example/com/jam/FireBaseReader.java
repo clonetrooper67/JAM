@@ -1,30 +1,43 @@
 package example.com.jam;
 
+import android.support.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by taz98 on 10/22/2016.
  */
 
 public class FireBaseReader {
-    void init(String UUID){
+
+    public void getProfileImage(String UUID) throws IOException{
         FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference storageRef = storage.getReferenceFromUrl("gs://junior-achievement-mobil-ad088.appspot.com/");
-        storageRef = storage.getReferenceFromUrl("gs://<your-bucket-name>");
-        StorageReference imagesRef = storageRef.child("images");
-        StorageReference spaceRef = storageRef.child("images/space.jpg");
-        String fileName = "profile.jpg";
-        spaceRef = imagesRef.child(fileName);
+        StorageReference imageRef = storageRef.child("images/" + UUID + "/profile.jpg");
 
-        String path = spaceRef.getPath();
+        String path = imageRef.getPath();
 
-        String name = spaceRef.getName();
+        File localFile = File.createTempFile("images", "jpg");
 
-        imagesRef = spaceRef.getParent();
+        imageRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                // Local temp file has been created
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                // Handle any errors
+            }
+        });
 
     }
-    public void getImage(String UUID){
 
-    }
 }
