@@ -9,16 +9,24 @@ import java.util.UUID;
 public class Post {
     private String title;
     private String body;
-    private int karma;
+    private String karma;
     private String user;
+    private String imgPath;
 
     public Post() {}
 
     public Post(String titleIn, String bodyIn, String userIn) {
         this.title = titleIn;
         this.body = bodyIn;
-        this.karma = 0;
+        this.karma = "0";
         this.user = userIn;
+    }
+    public Post(String titleIn, String bodyIn, String userIn, String postImagePath) {
+        this.title = titleIn;
+        this.body = bodyIn;
+        this.karma = "0";
+        this.user = userIn;
+        this.imgPath = postImagePath;
     }
 
     public String getUser() {
@@ -29,6 +37,14 @@ public class Post {
         this.user = user;
     }
 
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
     public String getBody() {
         return body;
     }
@@ -37,11 +53,11 @@ public class Post {
         this.body = body;
     }
 
-    public int getKarma() {
+    public String getKarma() {
         return karma;
     }
 
-    public void setKarma(int karma) {
+    public void setKarma(String karma) {
         this.karma = karma;
     }
 
