@@ -11,6 +11,7 @@ public class Post {
     private String body;
     private int karma;
     private String user;
+    private String imgPath;
 
     public Post() {}
 
@@ -20,6 +21,13 @@ public class Post {
         this.karma = 0;
         this.user = userIn;
     }
+    public Post(String titleIn, String bodyIn, String userIn, String postImagePath) {
+        this.title = titleIn;
+        this.body = bodyIn;
+        this.karma = 0;
+        this.user = userIn;
+        this.imgPath = postImagePath;
+    }
 
     public String getUser() {
         return user;
@@ -27,6 +35,14 @@ public class Post {
 
     public void setUser(String user) {
         this.user = user;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
     }
 
     public String getBody() {
