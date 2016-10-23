@@ -10,15 +10,23 @@ public class Post {
     private String title;
     private String body;
     private int karma;
-    private UUID user;
+    private String user;
 
     public Post() {}
 
-    public Post(String titleIn, String bodyIn, UUID userIn) {
+    public Post(String titleIn, String bodyIn, String userIn) {
         this.title = titleIn;
         this.body = bodyIn;
         this.karma = 0;
         this.user = userIn;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getBody() {
