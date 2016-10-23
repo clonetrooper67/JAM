@@ -29,6 +29,8 @@ Firebase has much functionality, including:
 
 -Image storage and access
 
+Most importantly, Firebase works off of a single Google account. The Firebase dashboard let's the admin edit posts, delete and add users, as well as delete pictures. In addition, Firebase also provides analytics on app usage.
+
 
 Firebase uses propritary tokens to authenticate users:
 "Created by Firebase when a user signs in to a Firebase app. These tokens are signed JWTs that securely identify a user in a Firebase project. These tokens contain basic profile information for a user, including the user's ID string, which is unique to the Firebase project. Because the integrity of ID tokens can be verified, you can send them to a backend server to identify the currently signed-in user." --Firebase Documentation
