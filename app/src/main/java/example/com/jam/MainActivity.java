@@ -34,9 +34,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
-// Hello World! --Josh
-// Hello World! --Zephanoh
-// Hello World! --Shane
+// The MainActivity class controls our main screen. Posts are displayed in a recycler list, in order
+// of popularity. When Back is pressed, the app is minimized; when Account is pressed, LogInActivity
+// is called. A Navigation Sidebar is populated with links that open various pages from the triadja.org
+// website.
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, FirebaseAuth.AuthStateListener {
 

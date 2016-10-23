@@ -15,6 +15,7 @@ import java.io.IOException;
  * Created by taz98 on 10/22/2016.
  */
 
+// The FireBaseReader class provides the ability to store, upload, and retrieve image files.
 public class FireBaseReader {
 
     public void getProfileImage(String UUID) throws IOException{

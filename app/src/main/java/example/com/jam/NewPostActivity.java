@@ -27,6 +27,8 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 
+// The NewPostActivity class handles the activity_new_post view; it allows a user to create a post
+// by writing a description and taking a selfie.
 public class NewPostActivity extends AppCompatActivity {
 
     private boolean hasImage = false;
