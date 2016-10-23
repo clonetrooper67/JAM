@@ -21,6 +21,9 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="35dp"
             android:src="@drawable/ja" />
 
         <EditText
@@ -37,17 +40,17 @@
         <requestFocus></requestFocus>
     </EditText>
 
-    <EditText
-        android:id="@+id/passwordField"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/emailField"
-        android:layout_below="@+id/emailField"
-        android:ems="10"
-        android:hint="@string/password_hint"
-        android:inputType="textPassword"></EditText>
+        <EditText
+            android:id="@+id/passwordField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/emailField"
+            android:layout_below="@+id/emailField"
+            android:ems="10"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"></EditText>
 
-    <Button
+        <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
