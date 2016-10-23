@@ -2,6 +2,7 @@ package example.com.jam;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.media.Image;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -62,7 +63,9 @@ public class NewPostActivity extends AppCompatActivity {
                 dispatchTakePictureIntent();
 
             }
+
         });
+
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,12 +127,17 @@ public class NewPostActivity extends AppCompatActivity {
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        ImageView image = (ImageView) findViewById(R.id.postImageView);
+
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             imageFile = imageBitmap;
+            image.setVisibility(View.VISIBLE);
             imageView.setImageBitmap(imageBitmap);
             hasImage = true;
+        } else{
+            image.setVisibility(View.INVISIBLE);
         }
     }
 
