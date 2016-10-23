@@ -148,6 +148,15 @@ public class MainActivity extends AppCompatActivity
             mFirebaseUser = mFirebaseAuth.getCurrentUser();
             return true;
         }
+        // Scroll to bottom on new messages
+        mRecyclerViewAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
+            @Override
+            public void onItemRangeInserted(int positionStart, int itemCount) {
+                mManager.smoothScrollToPosition(mPosts, null, mRecyclerViewAdapter.getItemCount());
+            }
+        });
+
+        mPosts.setAdapter(mRecyclerViewAdapter);
 
         return super.onOptionsItemSelected(item);
     }
@@ -164,6 +173,8 @@ public class MainActivity extends AppCompatActivity
             openPage("https://triadja.org/classroom-volunteers/volunteer-registration/");
         } else if (id == R.id.website_link) {
             openPage("https://triadja.org/");
+        }else if (id == R.id.programs_link) {
+            openPage("https://triadja.org/programs");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
