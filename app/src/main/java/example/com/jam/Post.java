@@ -17,12 +17,12 @@ public class Post {
     public Post(String bodyIn, String userIn) {
         this.body = bodyIn;
         this.karma = 0;
-        this.user = userIn;
+//        this.user = userIn;
     }
     public Post(String bodyIn, String userIn, String postImagePath) {
         this.body = bodyIn;
         this.karma = 0;
-        this.user = userIn;
+//        this.user = userIn;
         this.imgPath = postImagePath;
     }
 

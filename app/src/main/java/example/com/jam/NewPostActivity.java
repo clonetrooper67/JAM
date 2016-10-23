@@ -2,7 +2,6 @@ package example.com.jam;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.media.Image;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -57,7 +56,7 @@ public class NewPostActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         Button submitButton = (Button) findViewById(R.id.submitPostButton);
-        Button cameraButton = (Button) findViewById(R.id.imageButton);
+        Button cameraButton = (Button) findViewById(R.id.karmaButton);
 
         cameraButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -100,10 +99,10 @@ public class NewPostActivity extends AppCompatActivity {
                             }
                         });
 
-                        Post post = new Post(body, mUserId = mFirebaseUser.getUid(), "postImages" + "/" + mFirebaseUser.getUid());
+                        Post post = new Post(body, " ", "postImages" + "/" + mFirebaseUser.getUid());
                         mDatabase.child("posts").push().setValue(post);
                     }else {
-                        Post post = new Post(body, mUserId = mFirebaseUser.getUid());
+                        Post post = new Post(body, " ");
                         mDatabase.child("posts").push().setValue(post);
                     }
 

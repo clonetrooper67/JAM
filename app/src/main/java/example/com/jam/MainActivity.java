@@ -198,6 +198,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void populateViewHolder(PostHolder postView, Post post, int position) {
                 postView.setBody(post.getBody());
+                postView.setUser(post.getUser());
 
                 FirebaseUser currentUser = mFirebaseAuth.getCurrentUser();
             }
@@ -220,9 +221,9 @@ public class MainActivity extends AppCompatActivity
             mView = itemView;
         }
 
-        public void setTitle(String title) {
-            //TextView field = (TextView) mView.findViewById(R.id.card_view_profile_desc);
-            //field.setText("Hello");
+        public void setUser(String name) {
+//            TextView field = (TextView) mView.findViewById(R.id.card_view_uname);
+//            field.setText(name);
         }
 
         public void setBody(String text) {
