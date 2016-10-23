@@ -199,6 +199,7 @@ public class MainActivity extends AppCompatActivity
             public void populateViewHolder(PostHolder postView, Post post, int position) {
                 postView.setBody(post.getBody());
                 postView.setUser(post.getUser());
+                postView.setKarma(String.valueOf(post.getKarma()));
 
                 FirebaseUser currentUser = mFirebaseAuth.getCurrentUser();
             }
@@ -222,12 +223,16 @@ public class MainActivity extends AppCompatActivity
         }
 
         public void setUser(String name) {
-//            TextView field = (TextView) mView.findViewById(R.id.card_view_uname);
-//            field.setText(name);
+            TextView field = (TextView) mView.findViewById(R.id.card_view_uname);
+            field.setText(name);
         }
 
         public void setBody(String text) {
             TextView field = (TextView) mView.findViewById(R.id.card_view_post_body);
+            field.setText(text);
+        }
+        public void setKarma(String text){
+            TextView field = (TextView) mView.findViewById(R.id.karmaCount);
             field.setText(text);
         }
     }

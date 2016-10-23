@@ -10,10 +10,11 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/colorSecondary"
-    tools:context="example.com.jam.ProfileEditActivity">
+    tools:context="example.com.jam.ProfileEditActivity"
+    android:weightSum="1">
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
@@ -26,7 +27,7 @@
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="328dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
@@ -40,14 +41,15 @@
 
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Bio"
         android:ems="10"
         android:id="@+id/desc"
         android:layout_below="@+id/lNameEditText"
         android:background="@drawable/shapeline"
         android:textSize="25dp"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:hint="Bio"
+        android:layout_weight="0.20" />
 </LinearLayout>
