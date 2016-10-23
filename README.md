@@ -5,7 +5,7 @@ Create an application for adults involved in or interested in Junior Achievement
 
 <b>Vision for JAM:</b>
 
-We wanted to create a place for prospective volunteers as well as teachers to be able to see some of the best experiences that both volunteers as well as teachers have had with JA.
+We wanted to create a place for prospective volunteers as well as teachers to be able to see some of the best experiences that both volunteers, as well as teachers, have had with JA.
 
 <b>How we accomplish this:</b>
 
@@ -29,11 +29,11 @@ Firebase has much functionality, including:
 
 -Image storage and access
 
-Most importantly, Firebase works off of a single Google account. The Firebase dashboard let's the admin edit posts, delete and add users, as well as delete pictures. In addition, Firebase also provides analytics on app usage.
+Most importantly, Firebase works off of a single Google account. The Firebase dashboard lets the admin edit posts, delete and add users, as well as delete pictures. In addition, Firebase also provides analytics on app usage.
 
 
-Firebase uses propritary tokens to authenticate users:
-"Created by Firebase when a user signs in to a Firebase app. These tokens are signed JWTs that securely identify a user in a Firebase project. These tokens contain basic profile information for a user, including the user's ID string, which is unique to the Firebase project. Because the integrity of ID tokens can be verified, you can send them to a backend server to identify the currently signed-in user." --Firebase Documentation
+Firebase uses proprietary tokens to authenticate users:
+"Created by Firebase when a user signs into a Firebase app. These tokens are signed JWTs that securely identify a user in a Firebase project. These tokens contain basic profile information for a user, including the user's ID string, which is unique to the Firebase project. Because the integrity of ID tokens can be verified, you can send them to a backend server to identify the currently signed-in user." --Firebase Documentation
 
 <b>To Do:</b>
 
@@ -43,5 +43,5 @@ Firebase uses propritary tokens to authenticate users:
 
 -Implement Custom Profile Pages
 
--Implement ImageView in post layout (Already have archetecture for taking photos and submitting them, disabled for now)
+-Implement ImageView in post layout (Already have architecture for taking photos and submitting them, disabled for now)
 
