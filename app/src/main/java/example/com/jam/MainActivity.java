@@ -74,8 +74,6 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if(id == R.id.action_login) {
             Intent intent = new Intent(this, LogInActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             return true;
         }
