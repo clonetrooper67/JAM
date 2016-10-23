@@ -185,7 +185,6 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public void populateViewHolder(PostHolder postView, Post post, int position) {
-                postView.setTitle(post.getTitle());
                 postView.setBody(post.getBody());
 
                 FirebaseUser currentUser = mFirebaseAuth.getCurrentUser();

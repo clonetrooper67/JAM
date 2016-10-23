@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -37,7 +41,8 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="50dp"
+            android:background="@drawable/shapeline">
 
             <TextView
                 android:text="Name: "
@@ -45,13 +50,21 @@
                 android:layout_height="match_parent"
                 android:id="@+id/card_view_profile_name_is"
                 android:layout_weight="0.11" />
-
+            <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#008457"></View>
             <TextView
                 android:text="FirstName"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/card_view_profile_name_first"
                 android:layout_weight="0.90" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#008457"></View>
+
 
             <TextView
                 android:text="LastName"
@@ -64,13 +77,21 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="50dp"
+            android:background="@drawable/shapeline">
+
 
             <TextView
                 android:text="Contact: "
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/card_view_profile_email_is" />
+
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#008457"></View>
 
             <TextView
                 android:text="emailaddress@juniorachievement.net"
@@ -79,37 +100,28 @@
                 android:id="@+id/card_view_profile_email"
                 android:layout_weight="0.90" />
 
+
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/shapeline">
 
             <TextView
                 android:text="Description:"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/card_view_profile_desc_is" />
+                android:id="@+id/card_view_profile_desc_is"
+                />
 
             <TextView
                 android:text="Your description here..."
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:id="@+id/card_view_profile_desc" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:text="Save"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/card_view_profile_save"
-                    android:layout_weight="1" />
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:id="@+id/card_view_profile_desc"
+                />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

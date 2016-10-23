@@ -7,18 +7,23 @@ import java.util.UUID;
  */
 
 public class Post {
-    private String title;
     private String body;
     private int karma;
     private String user;
+    private String imgPath;
 
     public Post() {}
 
-    public Post(String titleIn, String bodyIn, String userIn) {
-        this.title = titleIn;
+    public Post(String bodyIn, String userIn) {
         this.body = bodyIn;
         this.karma = 0;
         this.user = userIn;
+    }
+    public Post(String bodyIn, String userIn, String postImagePath) {
+        this.body = bodyIn;
+        this.karma = 0;
+        this.user = userIn;
+        this.imgPath = postImagePath;
     }
 
     public String getUser() {
@@ -27,6 +32,14 @@ public class Post {
 
     public void setUser(String user) {
         this.user = user;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
     }
 
     public String getBody() {
@@ -45,11 +58,4 @@ public class Post {
         this.karma = karma;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 }
