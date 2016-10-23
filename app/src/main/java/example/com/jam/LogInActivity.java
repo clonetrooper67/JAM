@@ -32,11 +32,14 @@ public class LogInActivity extends AppCompatActivity {
 
         // Initialize FirebaseAuth
         mFirebaseAuth = FirebaseAuth.getInstance();
+        mFireBaseUser = mFirebaseAuth.getCurrentUser();
 
         signUpTextView = (TextView) findViewById(R.id.signUpText);
         emailEditText = (EditText) findViewById(R.id.emailField);
         passwordEditText = (EditText) findViewById(R.id.passwordField);
         logInButton = (Button) findViewById(R.id.loginButton);
+
+        updateLogInButton();
 
         signUpTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,13 +49,11 @@ public class LogInActivity extends AppCompatActivity {
             }
         });
 
-        mFireBaseUser = mFirebaseAuth.getCurrentUser();
-
         logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mFireBaseUser != null) {
-                    Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), ProfileEditActivity.class);
                     startActivity(intent);
                 } else {
 
@@ -91,7 +92,16 @@ public class LogInActivity extends AppCompatActivity {
                                 });
                     }
                 }
+                updateLogInButton();
             }
         });
+    }
+
+    protected void updateLogInButton() {
+        if (mFireBaseUser != null) {
+            logInButton.setText("Profile");
+        } else {
+            logInButton.setText("Login");
+        }
     }
 }
