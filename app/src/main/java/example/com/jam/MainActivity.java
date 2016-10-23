@@ -209,8 +209,8 @@ public class MainActivity extends AppCompatActivity
         }
 
         public void setTitle(String title) {
-            TextView field = (TextView) mView.findViewById(R.id.card_view_profile_desc);
-            field.setText("Hello");
+            //TextView field = (TextView) mView.findViewById(R.id.card_view_profile_desc);
+            //field.setText("Hello");
         }
 
         public void setBody(String text) {
