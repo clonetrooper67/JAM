@@ -92,15 +92,21 @@ public class LogInActivity extends AppCompatActivity {
                                 });
                     }
                 }
-                updateLogInButton();
             }
+
         });
+        updateLogInButton();
+
     }
 
     protected void updateLogInButton() {
         if (mFireBaseUser != null) {
-            logInButton.setText("Profile");
+            emailEditText.setVisibility(View.GONE);
+            passwordEditText.setVisibility(View.GONE);
+            logInButton.setText("Edit Profile");
         } else {
+            emailEditText.setVisibility(View.VISIBLE);
+            passwordEditText.setVisibility(View.VISIBLE);
             logInButton.setText("Login");
         }
     }
