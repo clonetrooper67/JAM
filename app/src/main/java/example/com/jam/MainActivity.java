@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity
         mPosts.setLayoutManager(mManager);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setImageResource(R.mipmap.ic_fab_launcher);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
