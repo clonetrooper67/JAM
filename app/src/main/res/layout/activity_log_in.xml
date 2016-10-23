@@ -16,14 +16,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/photo_image_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ja" />
+        <ImageView
+            android:id="@+id/photo_image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ja" />
 
-    <EditText
+        <EditText
         android:id="@+id/emailField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
