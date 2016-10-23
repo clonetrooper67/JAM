@@ -97,10 +97,10 @@ public class NewPostActivity extends AppCompatActivity {
                             }
                         });
 
-                        Post post = new Post(title, body, mUserId = mFirebaseUser.getEmail(), "postImages" + "/" + mFirebaseUser.getUid());
+                        Post post = new Post(title, body, mUserId = mFirebaseUser.getUid(), "postImages" + "/" + mFirebaseUser.getUid());
                         mDatabase.child("posts").push().setValue(post);
                     }else {
-                        Post post = new Post(title, body, mUserId = mFirebaseUser.getEmail());
+                        Post post = new Post(title, body, mUserId = mFirebaseUser.getUid());
                         mDatabase.child("posts").push().setValue(post);
                     }
 
